@@ -58,7 +58,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
 
         if (statusCode == 200) {
           Future.delayed(Duration(seconds: 1), () {
-            widget.onClose?.call();
+            widget.onClose.call();
           });
         }
       } catch (e) {
