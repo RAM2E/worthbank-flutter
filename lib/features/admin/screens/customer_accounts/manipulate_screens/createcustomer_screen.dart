@@ -56,10 +56,9 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           _isProcessing = false;
         });
 
-        // Close the form and return to the parent view on success
         if (statusCode == 200) {
           Future.delayed(Duration(seconds: 1), () {
-            widget.onClose?.call(); // Trigger the onClose callback
+            widget.onClose?.call();
           });
         }
       } catch (e) {
